@@ -8,12 +8,22 @@ namespace homework_figures
         {
             #region - triangle 1st variant
 
-        
-            string oneBlockOfTriangle = "";
-            for (string asterix = "*"; oneBlockOfTriangle.Length < 10; oneBlockOfTriangle = string.Concat(oneBlockOfTriangle, asterix))
+            string oneBlockOfTriangle = "*";
+            string emptySpace = "           "; // empty triangle sides spaces
+
+            for (string doubleAsterix = "**"; oneBlockOfTriangle.Length < 11; oneBlockOfTriangle = string.Concat(oneBlockOfTriangle, doubleAsterix))
             {
-                Console.WriteLine(oneBlockOfTriangle);
+                
+                string outputLine = string.Concat(emptySpace, oneBlockOfTriangle);
+                Console.WriteLine(outputLine);
+                if (emptySpace.Length > 1)
+                {
+                    int lastSumbolIndex = emptySpace.Length - 1; // find last sumbol index
+                    emptySpace = emptySpace.Remove(lastSumbolIndex); // cut emptySpace 1 sumboll
+                }
+       
             }
+
             Console.ReadKey();
 
             #endregion
