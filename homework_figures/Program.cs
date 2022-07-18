@@ -49,6 +49,41 @@ namespace homework_figures
 
             #endregion
 
+            #region - SQUARE without filling
+
+            Console.WriteLine("\n Drawing SQUARE with given side length / without filling");
+            Console.WriteLine("\n Enter square side length:");
+            int squareWithoutFillSideLength = Convert.ToInt32(Console.ReadLine()); // TODO: add validations
+            string squareWithoutFillBlock = string.Empty;
+
+            for (int j = 0; j < squareWithoutFillSideLength; j++)
+            {
+                squareWithoutFillBlock = string.Concat(squareWithoutFillBlock, "*", " "); // create 1 line of the square 
+            }
+
+            for (int i = 0; i < squareWithoutFillSideLength; i++)
+            {
+                if (i == 0 | i == squareWithoutFillSideLength - 1 )
+                {
+                    Console.WriteLine(squareWithoutFillBlock, "\n");
+                }
+                else 
+                {
+                    Console.WriteLine(string.Concat("*", squareWithoutFillBlock.Remove(squareWithoutFillBlock.Length - 3).Replace("*"," "), "*"));
+                }
+
+            }
+
+            
+
+            #endregion
+
+            #region - CIRCLE
+
+
+
+            #endregion
+
             Console.Write("Press <Enter> to exit... ");
             while (Console.ReadKey().Key != ConsoleKey.Enter) { }
 
