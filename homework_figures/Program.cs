@@ -11,12 +11,12 @@ namespace homework_figures
             string oneBlockOfTriangle = "*";
             string emptySpace = "           "; // empty triangle sides spaces
 
-    //        Console.WriteLine("Draw triangle using for loop and variable with spaces \n");
+            Console.WriteLine("Draw triangle using for loop and variable with spaces \n");
 
             for (string doubleAsterix = "**"; oneBlockOfTriangle.Length < 11; oneBlockOfTriangle = string.Concat(oneBlockOfTriangle, doubleAsterix))
             {
                 string outputLine = string.Concat(emptySpace, oneBlockOfTriangle);
-    //            Console.WriteLine(outputLine);
+                Console.WriteLine(outputLine);
                 if (emptySpace.Length > 1)
                 {
                     int lastSumbolIndex = emptySpace.Length - 1; // find last sumbol index
@@ -25,13 +25,12 @@ namespace homework_figures
        
             }
 
-
-
             #endregion
 
             #region - SQUARE
 
-            Console.WriteLine("Enter square side length:");
+            Console.WriteLine("\n Drawing SQUARE with given side length");
+            Console.WriteLine("\n Enter square side length:");
             int squareSideLength = Convert.ToInt32(Console.ReadLine()); // TODO: add validations
             string squareBlock = string.Empty;
 
