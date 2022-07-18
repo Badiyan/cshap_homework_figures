@@ -33,17 +33,20 @@ namespace homework_figures
 
             Console.WriteLine("Enter square side length:");
             int squareSideLength = Convert.ToInt32(Console.ReadLine()); // TODO: add validations
-            string squareOneBlock = string.Empty;
+            string squareBlock = string.Empty;
 
             for (int i = 0; i < squareSideLength; i++)
             {
-                squareOneBlock = string.Concat(squareOneBlock, "*" , " ");
+                for (int j = 0; j < squareSideLength; j++)
+                {
+                    squareBlock = string.Concat(squareBlock, "*", " "); // create 1 line of the square 
+                }
+
+                squareBlock = string.Concat(squareBlock, "\n"); // dublicate line n times ; n = side lenght
+
             }
 
-            for (int j = 0; j < squareSideLength; j++)
-            {
-                Console.WriteLine(squareOneBlock);
-            }
+            Console.WriteLine(squareBlock);
 
             #endregion
 
