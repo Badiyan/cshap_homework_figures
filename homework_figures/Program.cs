@@ -9,7 +9,7 @@ namespace homework_figures
             #region - TRIANGLE
 
             string oneBlockOfTriangle = "*";
-            string emptySpace = "           "; // empty triangle sides spaces
+            string emptySpace = "     "; // empty triangle sides spaces
 
             Console.WriteLine("Draw triangle using for loop and variable with spaces \n");
 
@@ -33,6 +33,7 @@ namespace homework_figures
             Console.WriteLine("\n Enter square side length:");
             int squareSideLength = Convert.ToInt32(Console.ReadLine()); // TODO: add validations
             string squareBlock = string.Empty;
+            Console.WriteLine("\n");
 
             for (int i = 0; i < squareSideLength; i++)
             {
@@ -46,7 +47,7 @@ namespace homework_figures
             }
 
             Console.WriteLine(squareBlock);
-
+            Console.WriteLine("\n");
             #endregion
 
             #region - SQUARE without filling
@@ -55,7 +56,7 @@ namespace homework_figures
             Console.WriteLine("\n Enter square side length:");
             int squareWithoutFillSideLength = Convert.ToInt32(Console.ReadLine()); // TODO: add validations
             string squareWithoutFillBlock = string.Empty;
-
+            Console.WriteLine("\n");
             for (int j = 0; j < squareWithoutFillSideLength; j++)
             {
                 squareWithoutFillBlock = string.Concat(squareWithoutFillBlock, "*", " "); // create 1 line of the square 
@@ -73,8 +74,9 @@ namespace homework_figures
                 }
 
             }
+            Console.WriteLine("\n");
 
-            
+
 
             #endregion
 
