@@ -6,12 +6,16 @@ namespace homework_figures
     {
         static void Main(string[] args)
         {
+
+            ConsoleColor currentForeground = Console.ForegroundColor; // save default console color
+
             #region - TRIANGLE
 
             string oneBlockOfTriangle = "*";
             string emptySpace = "     "; // empty triangle sides spaces
-
+            
             Console.WriteLine("Draw triangle using for loop and variable with spaces \n");
+            Console.ForegroundColor = ConsoleColor.Red;
 
             for (string doubleAsterix = "**"; oneBlockOfTriangle.Length < 11; oneBlockOfTriangle = string.Concat(oneBlockOfTriangle, doubleAsterix))
             {
@@ -29,11 +33,14 @@ namespace homework_figures
 
             #region - SQUARE
 
-            Console.WriteLine("\n Drawing SQUARE with given side length");
-            Console.WriteLine("\n Enter square side length:");
+            Console.ForegroundColor = currentForeground; // return default color
+            Console.WriteLine("\n Drawing SQUARE with given side length \n Enter square side length:\n");
+
             int squareSideLength = Convert.ToInt32(Console.ReadLine()); // TODO: add validations
             string squareBlock = string.Empty;
+
             Console.WriteLine("\n");
+            Console.ForegroundColor = ConsoleColor.Magenta;
 
             for (int i = 0; i < squareSideLength; i++)
             {
@@ -46,17 +53,19 @@ namespace homework_figures
 
             }
 
-            Console.WriteLine(squareBlock);
-            Console.WriteLine("\n");
+            Console.WriteLine(squareBlock + "\n");
+            Console.ForegroundColor = currentForeground; // return default color
             #endregion
 
             #region - SQUARE without filling
 
-            Console.WriteLine("\n Drawing SQUARE with given side length / without filling");
-            Console.WriteLine("\n Enter square side length:");
+            Console.WriteLine("\n Drawing SQUARE with given side length / without filling\n Enter square side length:");
+ 
             int squareWithoutFillSideLength = Convert.ToInt32(Console.ReadLine()); // TODO: add validations
             string squareWithoutFillBlock = string.Empty;
             Console.WriteLine("\n");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             for (int j = 0; j < squareWithoutFillSideLength; j++)
             {
                 squareWithoutFillBlock = string.Concat(squareWithoutFillBlock, "*", " "); // create 1 line of the square 
@@ -75,7 +84,7 @@ namespace homework_figures
 
             }
             Console.WriteLine("\n");
-
+            Console.ForegroundColor = currentForeground; // return default color
 
 
             #endregion
@@ -83,6 +92,10 @@ namespace homework_figures
             #region - CIRCLE
 
 
+
+            #endregion
+
+            #region Christmas tree
 
             #endregion
 
