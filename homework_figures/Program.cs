@@ -11,7 +11,7 @@ namespace homework_figures
             string oneBlockOfTriangle = "*";
             string emptySpace = "           "; // empty triangle sides spaces
 
-    //        Console.WriteLine("Draw triangle using for cycle and variable with spaces \n");
+    //        Console.WriteLine("Draw triangle using for loop and variable with spaces \n");
 
             for (string doubleAsterix = "**"; oneBlockOfTriangle.Length < 11; oneBlockOfTriangle = string.Concat(oneBlockOfTriangle, doubleAsterix))
             {
@@ -31,8 +31,19 @@ namespace homework_figures
 
             #region - SQUARE
 
-  //          Console.ReadKey("Input square side length: ");
+            Console.WriteLine("Enter square side length:");
+            int squareSideLength = Convert.ToInt32(Console.ReadLine()); // TODO: add validations
+            string squareOneBlock = string.Empty;
 
+            for (int i = 0; i < squareSideLength; i++)
+            {
+                squareOneBlock = string.Concat(squareOneBlock, "*" , " ");
+            }
+
+            for (int j = 0; j < squareSideLength; j++)
+            {
+                Console.WriteLine(squareOneBlock);
+            }
 
             #endregion
 
