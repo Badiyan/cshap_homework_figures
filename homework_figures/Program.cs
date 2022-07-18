@@ -29,6 +29,11 @@ namespace homework_figures
        
             }
 
+            Console.ForegroundColor = currentForeground;
+            Console.Write("Press <Enter> for next figure... ");
+            while (Console.ReadKey().Key != ConsoleKey.Enter) { }
+            Console.Clear();
+
             #endregion
 
             #region - SQUARE
@@ -54,7 +59,11 @@ namespace homework_figures
             }
 
             Console.WriteLine(squareBlock + "\n");
-            Console.ForegroundColor = currentForeground; // return default color
+            Console.ForegroundColor = currentForeground;
+            Console.Write("Press <Enter> for next figure .... ");
+            while (Console.ReadKey().Key != ConsoleKey.Enter) { }
+            Console.Clear();
+
             #endregion
 
             #region - SQUARE without filling
@@ -83,9 +92,12 @@ namespace homework_figures
                 }
 
             }
-            Console.WriteLine("\n");
-            Console.ForegroundColor = currentForeground; // return default color
 
+            Console.WriteLine("\n");
+            Console.ForegroundColor = currentForeground;  // return default color
+            Console.Write("Press <Enter> for next figure... ");
+            while (Console.ReadKey().Key != ConsoleKey.Enter) { }
+            Console.Clear();
 
             #endregion
 
