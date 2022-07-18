@@ -91,11 +91,13 @@ namespace homework_figures
 
             #region - CIRCLE
 
-
+            //TODO: circle
 
             #endregion
 
             #region Christmas tree
+
+            //TODO: Christmas tree
 
             #endregion
 
