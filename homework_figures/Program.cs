@@ -107,7 +107,34 @@ namespace homework_figures
 
             #region - CIRCLE
 
-            
+            Console.WriteLine("\n Drawing CIRCLE ! \n");
+            Console.Write("Press <Enter> for CIRCLE... ");
+            while (Console.ReadKey().Key != ConsoleKey.Enter) { }
+            Console.Clear();
+            int width = 120;
+            int height = 30;
+            float aspect = (float)width / height;
+            string[] elements = new string[width * height + 1];
+            elements[width * height] = "\n";
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {   
+                    float x = (float)i / width * 2.0f - 1.0f;
+                    float y = (float)j / height * 2.0f - 1.0f;
+                    x *= aspect/2;  
+                    string element = " ";
+                    if (x * x + y * y < 0.5)
+                    { 
+                        element = "*"; 
+                    }
+                    elements[i + j * width] = element;
+                }
+            }
+
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine($"{string.Join("", elements)}");
+            Console.ForegroundColor = currentForeground;  // return default color
 
             #endregion
 
