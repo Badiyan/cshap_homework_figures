@@ -17,11 +17,11 @@ namespace homework_figures
    
             int triangleHeight = Convert.ToInt16(Console.ReadLine()); // TODO: add validations
             string oneBlockOfTriangle = "*";
-            string emptySpace = new String(' ', triangleHeight / 2);
+            string emptySpace = new String(' ', triangleHeight);
 
             Console.ForegroundColor = ConsoleColor.Red;
 
-            for (string doubleAsterix = "**"; oneBlockOfTriangle.Length < (triangleHeight - 1) ; oneBlockOfTriangle = string.Concat(oneBlockOfTriangle, doubleAsterix))
+            for (string doubleAsterix = "**"; oneBlockOfTriangle.Length < (triangleHeight * 2) ; oneBlockOfTriangle = string.Concat(oneBlockOfTriangle, doubleAsterix))
             {
                 string outputLine = string.Concat(emptySpace, oneBlockOfTriangle);
                 Console.WriteLine(outputLine);
