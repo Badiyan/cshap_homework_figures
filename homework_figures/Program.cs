@@ -11,13 +11,17 @@ namespace homework_figures
 
             #region - TRIANGLE
 
+//            int triangleHeight = 20;
+
+            Console.WriteLine("Draw triangle using for loop and variable with spaces \n \n Enter triangle heigth:\n");
+   
+            int triangleHeight = Convert.ToInt16(Console.ReadLine()); // TODO: add validations
             string oneBlockOfTriangle = "*";
-            string emptySpace = "     "; // empty triangle sides spaces
-            
-            Console.WriteLine("Draw triangle using for loop and variable with spaces \n");
+            string emptySpace = new String(' ', triangleHeight / 2);
+
             Console.ForegroundColor = ConsoleColor.Red;
 
-            for (string doubleAsterix = "**"; oneBlockOfTriangle.Length < 11; oneBlockOfTriangle = string.Concat(oneBlockOfTriangle, doubleAsterix))
+            for (string doubleAsterix = "**"; oneBlockOfTriangle.Length < (triangleHeight - 1) ; oneBlockOfTriangle = string.Concat(oneBlockOfTriangle, doubleAsterix))
             {
                 string outputLine = string.Concat(emptySpace, oneBlockOfTriangle);
                 Console.WriteLine(outputLine);
@@ -30,7 +34,7 @@ namespace homework_figures
             }
 
             Console.ForegroundColor = currentForeground;
-            Console.Write("Press <Enter> for next figure... ");
+            Console.Write("\n Press <Enter> for next figure... \n ");
             while (Console.ReadKey().Key != ConsoleKey.Enter) { }
             Console.Clear();
 
@@ -103,7 +107,7 @@ namespace homework_figures
 
             #region - CIRCLE
 
-            //TODO: circle
+            
 
             #endregion
 
