@@ -111,11 +111,6 @@ namespace homework_figures
 
             #endregion
 
-            #region Christmas tree
-
-            //TODO: Christmas tree
-
-            #endregion
 
             Console.Write("Press <Enter> to exit... ");
             while (Console.ReadKey().Key != ConsoleKey.Enter) { }
